@@ -2080,6 +2080,10 @@ input, select, textarea {
 			height: 35em;
 		}
 
+		.left-sidebar #header {
+			height: 35em;
+		}
+
 /* Logo */
 
 	#logo {
