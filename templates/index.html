@@ -33,10 +33,9 @@
 							<li><a href="#">Home</a></li>
 							<li><a href="#cities">Cities</a>
 								<ul>
-									<li><a href="#montreal">Montreal, QC</a></li>										
-									<li><a href="#boston">Boston, MA</a></li>
-									<li><a href="#newyork">New York, NY</a></li>
-									<li><a href="#scranton">Scranton, PA</a></li>
+									{% for city in cities %}
+									<li><a href="index.php?cmd=city&city={{ city.id }}">{{ city.name }}</a></li>
+									{% endfor %}
 								</ul>		
 							<li><a href="#artists">Artists</a>
 									<ul>
