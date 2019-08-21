@@ -6,6 +6,7 @@
 require_once './vendor/autoload.php';
 require_once 'config.php';
 
+print_r($_POST);
 	/**	CITIES **/
 	/* retrieve all rows from cities */
 	$query = "SELECT id, name, photo, description FROM cities WHERE navbar>0 ORDER BY navbar";
