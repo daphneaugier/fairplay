@@ -89,11 +89,24 @@ class __TwigTemplate_c0739610c51769b4ec99e9e0ea0f00625def8eadc25fb76580ec2fda333
         echo "\t\t\t\t\t\t\t\t</ul>\t\t
 \t\t\t\t\t\t\t<li><a href=\"#artists\">Artists</a>
 \t\t\t\t\t\t\t\t\t<ul>
-\t\t\t\t\t\t\t\t\t\t<li><a href=\"#\">Band name</a></li>
-\t\t\t\t\t\t\t\t\t\t<li><a href=\"#\">Band name</a></li>\t\t\t\t\t\t\t\t\t\t\t
-\t\t\t\t\t\t\t\t\t\t<li><a href=\"#\">Band name</a></li>
-\t\t\t\t\t\t\t\t\t\t<li><a href=\"#artists\">More</a></li>
-\t\t\t\t\t\t\t\t\t</ul>
+\t\t\t\t\t\t\t\t\t";
+        // line 42
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(($context["artists"] ?? null));
+        foreach ($context['_seq'] as $context["_key"] => $context["artist"]) {
+            // line 43
+            echo "\t\t\t\t\t\t\t\t\t<li><a href=\"index.php?cmd=artist&artist=";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["artist"], "id", [], "any", false, false, false, 43), "html", null, true);
+            echo "\">";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["artist"], "name", [], "any", false, false, false, 43), "html", null, true);
+            echo "</a></li>
+\t\t\t\t\t\t\t\t\t";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['artist'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 45
+        echo "\t\t\t\t\t\t\t\t\t</ul>
 \t\t\t\t\t\t\t<li><a href=\"#archives\">Past events</a></li>
 \t\t\t\t\t\t\t<li><a href=\"#contact\">Contact</a></li>
 \t\t\t\t\t\t</ul>
@@ -183,111 +196,98 @@ class __TwigTemplate_c0739610c51769b4ec99e9e0ea0f00625def8eadc25fb76580ec2fda333
 \t\t\t\t</section>
 
 \t\t\t<!-- Highlights -->
+\t\t\t<!-- CITIES -->
 \t\t\t\t<section id=\"highlights\" class=\"wrapper style3\">
 
 \t\t\t\t<div class=\"title\" id=\"cities\">Cities</div>\t
 \t\t\t\t\t<div class=\"container\">
 \t\t\t\t\t\t<div class=\"row aln-center\">
-\t\t\t\t\t\t\t\t<div class=\"col-4 col-12-small\">
+
+\t\t\t\t\t\t\t";
+        // line 142
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(($context["all_cities"] ?? null));
+        foreach ($context['_seq'] as $context["_key"] => $context["city"]) {
+            // line 143
+            echo "\t\t\t\t\t\t\t\t<div class=\"col-4 col-12-small\">
 \t\t\t\t\t\t\t\t\t<section class=\"box\">
 \t\t\t\t\t\t\t\t\t\t<header>
-\t\t\t\t\t\t\t\t\t\t\t<h2>Montreal, QC</h2>
+\t\t\t\t\t\t\t\t\t\t\t<h2>";
+            // line 146
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["city"], "name", [], "any", false, false, false, 146), "html", null, true);
+            echo "</h2>
 \t\t\t\t\t\t\t\t\t\t</header>
-\t\t\t\t\t\t\t\t\t\t<a class=\"image featured\"><img src=\"images/montreal.jpg\" alt=\"\" /></a>
-\t\t\t\t\t\t\t\t\t\t<p>Name of univerisities or bands available in this city.</p>
-\t\t\t\t\t\t\t\t\t\t<a href=\"#montreal\" class=\"button style1\">See artists</a>
+\t\t\t\t\t\t\t\t\t\t<a class=\"image featured\"><img src=\"images/";
+            // line 148
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["city"], "photo", [], "any", false, false, false, 148), "html", null, true);
+            echo "\" alt=\"View of ";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["city"], "name", [], "any", false, false, false, 148), "html", null, true);
+            echo "\" /></a>
+\t\t\t\t\t\t\t\t\t\t<p>";
+            // line 149
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["city"], "description", [], "any", false, false, false, 149), "html", null, true);
+            echo "</p>
+\t\t\t\t\t\t\t\t\t\t<a href=\"?cmd=list_artists&city=";
+            // line 150
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["city"], "id", [], "any", false, false, false, 150), "html", null, true);
+            echo "\" class=\"button style1\">See artists</a>
 \t\t\t\t\t\t\t\t\t</section>
 \t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t<div class=\"col-4 col-12-small\">
-\t\t\t\t\t\t\t\t\t<section class=\"box\">
-\t\t\t\t\t\t\t\t\t\t<header>
-\t\t\t\t\t\t\t\t\t\t\t<h2>Boston, MA</h2>
-\t\t\t\t\t\t\t\t\t\t</header>
-\t\t\t\t\t\t\t\t\t\t<a class=\"image featured\"><img src=\"images/boston.jpg\" alt=\"\" /></a>
-\t\t\t\t\t\t\t\t\t\t<p>Name of univerisities or bands available in this city.</p>
-\t\t\t\t\t\t\t\t\t\t<a href=\"#boston\" class=\"button style1\">See artists</a>
-\t\t\t\t\t\t\t\t\t</section>
-\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t<div class=\"col-4 col-12-small\">
-\t\t\t\t\t\t\t\t\t\t<section class=\"box\">
-\t\t\t\t\t\t\t\t\t\t\t<header>
-\t\t\t\t\t\t\t\t\t\t\t\t<h2>New York, NY</h2>
-\t\t\t\t\t\t\t\t\t\t\t</header>
-\t\t\t\t\t\t\t\t\t\t\t<a class=\"image featured\"><img src=\"images/newyork.jpg\" alt=\"\" /></a>
-\t\t\t\t\t\t\t\t\t\t\t<p>Name of univerisities or bands available in this city.</p>
-\t\t\t\t\t\t\t\t\t\t\t<a href=\"#newyork\" class=\"button style1\">See artists</a>
-\t\t\t\t\t\t\t\t\t\t</section>
-\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t<div class=\"col-4 col-12-small\">
-\t\t\t\t\t\t\t\t\t\t<section class=\"box\">
-\t\t\t\t\t\t\t\t\t\t\t<header>
-\t\t\t\t\t\t\t\t\t\t\t\t<h2>Scranton, PA</h2>
-\t\t\t\t\t\t\t\t\t\t\t</header>
-\t\t\t\t\t\t\t\t\t\t\t<a class=\"image featured\"><img src=\"images/scranton.jpg\" alt=\"\" /></a>
-\t\t\t\t\t\t\t\t\t\t\t<p>Name of univerisities or bands available in this city.</p>
-\t\t\t\t\t\t\t\t\t\t\t<a href=\"#scranton\" class=\"button style1\">See artists</a>
-\t\t\t\t\t\t\t\t\t\t</section>
-\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t<div class=\"col-4 col-12-small\">
-\t\t\t\t\t\t\t\t\t\t<section class=\"box\">
-\t\t\t\t\t\t\t\t\t\t\t<header>
-\t\t\t\t\t\t\t\t\t\t\t\t<h2>City</h2>
-\t\t\t\t\t\t\t\t\t\t\t</header>
-\t\t\t\t\t\t\t\t\t\t\t<a class=\"image featured\"><img src=\"images/blanc.gif\" alt=\"\" /></a>
-\t\t\t\t\t\t\t\t\t\t\t<p>Name of univerisities or bands available in this city.</p>
-\t\t\t\t\t\t\t\t\t\t\t<a href=\"#\" class=\"button style1\">See artists</a>
-\t\t\t\t\t\t\t\t\t\t</section>
-\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t<div class=\"col-4 col-12-small\">
-\t\t\t\t\t\t\t\t\t\t\t<section class=\"box\">
-\t\t\t\t\t\t\t\t\t\t\t\t<header>
-\t\t\t\t\t\t\t\t\t\t\t\t\t<h2>City</h2>
-\t\t\t\t\t\t\t\t\t\t\t\t</header>
-\t\t\t\t\t\t\t\t\t\t\t\t<a class=\"image featured\"><img src=\"images/blanc.gif\" alt=\"\" /></a>
-\t\t\t\t\t\t\t\t\t\t\t\t<p>Name of univerisities or bands available in this city.</p>
-\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"#\" class=\"button style1\">See artists</a>
-\t\t\t\t\t\t\t\t\t\t\t</section>
-\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['city'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 154
+        echo "\t\t\t\t\t\t</div>
 \t\t\t\t\t</div>
 \t\t\t\t</div>
 \t\t\t\t</section>
 \t\t\t\t
+\t\t\t\t<!-- ARTISTS -->
 \t\t\t\t<section id=\"highlights\" class=\"wrapper style2\">
 
 \t\t\t\t<div class=\"title\" id=\"artists\">Artists</div>
 \t\t\t\t\t<div class=\"container\">
 \t\t\t\t\t\t<div class=\"row aln-center\">
-\t\t\t\t\t\t\t<div class=\"col-4 col-12-medium\">
+
+\t\t\t\t\t\t\t";
+        // line 166
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(($context["all_artists"] ?? null));
+        foreach ($context['_seq'] as $context["_key"] => $context["artist"]) {
+            // line 167
+            echo "\t\t\t\t\t\t\t<div class=\"col-4 col-12-medium\">
 \t\t\t\t\t\t\t\t<section class=\"highlight\">
-\t\t\t\t\t\t\t\t\t<a href=\"#\" class=\"image featured\"><img src=\"images/bannerr.jpg\" alt=\"\" /></a>
-\t\t\t\t\t\t\t\t\t<h3><a href=\"#\">Name of artist/band</a></h3>
-\t\t\t\t\t\t\t\t\t<p>Brief story about artist/specificity</p>
+\t\t\t\t\t\t\t\t\t<a class=\"image featured\"><img src=\"images/";
+            // line 169
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["artist"], "photo", [], "any", false, false, false, 169), "html", null, true);
+            echo "\" alt=\"View of ";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["artist"], "name", [], "any", false, false, false, 169), "html", null, true);
+            echo "\" /></a>
+\t\t\t\t\t\t\t\t\t<h3><a href=\"#\">";
+            // line 170
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["artist"], "name", [], "any", false, false, false, 170), "html", null, true);
+            echo "</a></h3>
+\t\t\t\t\t\t\t\t\t<p>";
+            // line 171
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["artist"], "description", [], "any", false, false, false, 171), "html", null, true);
+            echo "</p>
 \t\t\t\t\t\t\t\t\t<ul class=\"actions\">
-\t\t\t\t\t\t\t\t\t\t<li><a href=\"#\" class=\"button style1\">Learn More</a></li>
+\t\t\t\t\t\t\t\t\t\t<li><a href=\"?cmd=artist&artist=";
+            // line 173
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["artist"], "id", [], "any", false, false, false, 173), "html", null, true);
+            echo "\" class=\"button style1\">Learn More</a></li>
 \t\t\t\t\t\t\t\t\t</ul>
 \t\t\t\t\t\t\t\t</section>
 \t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t<div class=\"col-4 col-12-medium\">
-\t\t\t\t\t\t\t\t<section class=\"highlight\">
-\t\t\t\t\t\t\t\t\t<a href=\"#\" class=\"image featured\"><img src=\"images/bannerr.jpg\" alt=\"\" /></a>
-\t\t\t\t\t\t\t\t\t<h3><a href=\"#\">Name of artist/band</a></h3>
-\t\t\t\t\t\t\t\t\t<p>Brief story about artist/specificity</p>
-\t\t\t\t\t\t\t\t\t<ul class=\"actions\">
-\t\t\t\t\t\t\t\t\t\t<li><a href=\"#\" class=\"button style1\">Learn More</a></li>
-\t\t\t\t\t\t\t\t\t</ul>
-\t\t\t\t\t\t\t\t</section>
-\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t<div class=\"col-4 col-12-medium\">
-\t\t\t\t\t\t\t\t<section class=\"highlight\">
-\t\t\t\t\t\t\t\t\t<a href=\"#\" class=\"image featured\"><img src=\"images/bannerr.jpg\" alt=\"\" /></a>
-\t\t\t\t\t\t\t\t\t<h3><a href=\"#\">Name of artist/band</a></h3>
-\t\t\t\t\t\t\t\t\t<p>Brief story about artist/specificity</p>
-\t\t\t\t\t\t\t\t\t<ul class=\"actions\">
-\t\t\t\t\t\t\t\t\t\t<li><a href=\"#\" class=\"button style1\">Learn More</a></li>
-\t\t\t\t\t\t\t\t\t</ul>
-\t\t\t\t\t\t\t\t</section>
-\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['artist'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 178
+        echo "
 \t\t\t\t\t\t</div>
 \t\t\t\t\t</div>
 \t\t\t\t</section>
@@ -415,7 +415,7 @@ class __TwigTemplate_c0739610c51769b4ec99e9e0ea0f00625def8eadc25fb76580ec2fda333
 
     public function getDebugInfo()
     {
-        return array (  89 => 39,  78 => 37,  74 => 36,  37 => 1,);
+        return array (  290 => 178,  279 => 173,  274 => 171,  270 => 170,  264 => 169,  260 => 167,  256 => 166,  242 => 154,  232 => 150,  228 => 149,  222 => 148,  217 => 146,  212 => 143,  208 => 142,  109 => 45,  98 => 43,  94 => 42,  89 => 39,  78 => 37,  74 => 36,  37 => 1,);
     }
 
     public function getSourceContext()

@@ -39,10 +39,9 @@
 								</ul>		
 							<li><a href="#artists">Artists</a>
 									<ul>
-										<li><a href="#">Band name</a></li>
-										<li><a href="#">Band name</a></li>											
-										<li><a href="#">Band name</a></li>
-										<li><a href="#artists">More</a></li>
+									{% for artist in artists %}
+									<li><a href="index.php?cmd=artist&artist={{ artist.id }}">{{ artist.name }}</a></li>
+									{% endfor %}
 									</ul>
 							<li><a href="#archives">Past events</a></li>
 							<li><a href="#contact">Contact</a></li>
@@ -133,111 +132,50 @@
 				</section>
 
 			<!-- Highlights -->
+			<!-- CITIES -->
 				<section id="highlights" class="wrapper style3">
 
 				<div class="title" id="cities">Cities</div>	
 					<div class="container">
 						<div class="row aln-center">
+
+							{% for city in all_cities %}
 								<div class="col-4 col-12-small">
 									<section class="box">
 										<header>
-											<h2>Montreal, QC</h2>
+											<h2>{{ city.name }}</h2>
 										</header>
-										<a class="image featured"><img src="images/montreal.jpg" alt="" /></a>
-										<p>Name of univerisities or bands available in this city.</p>
-										<a href="#montreal" class="button style1">See artists</a>
+										<a class="image featured"><img src="images/{{ city.photo }}" alt="View of {{ city.name }}" /></a>
+										<p>{{ city.description }}</p>
+										<a href="?cmd=list_artists&city={{ city.id }}" class="button style1">See artists</a>
 									</section>
 								</div>
-								<div class="col-4 col-12-small">
-									<section class="box">
-										<header>
-											<h2>Boston, MA</h2>
-										</header>
-										<a class="image featured"><img src="images/boston.jpg" alt="" /></a>
-										<p>Name of univerisities or bands available in this city.</p>
-										<a href="#boston" class="button style1">See artists</a>
-									</section>
-								</div>
-								<div class="col-4 col-12-small">
-										<section class="box">
-											<header>
-												<h2>New York, NY</h2>
-											</header>
-											<a class="image featured"><img src="images/newyork.jpg" alt="" /></a>
-											<p>Name of univerisities or bands available in this city.</p>
-											<a href="#newyork" class="button style1">See artists</a>
-										</section>
-								</div>
-								<div class="col-4 col-12-small">
-										<section class="box">
-											<header>
-												<h2>Scranton, PA</h2>
-											</header>
-											<a class="image featured"><img src="images/scranton.jpg" alt="" /></a>
-											<p>Name of univerisities or bands available in this city.</p>
-											<a href="#scranton" class="button style1">See artists</a>
-										</section>
-									</div>
-									<div class="col-4 col-12-small">
-										<section class="box">
-											<header>
-												<h2>City</h2>
-											</header>
-											<a class="image featured"><img src="images/blanc.gif" alt="" /></a>
-											<p>Name of univerisities or bands available in this city.</p>
-											<a href="#" class="button style1">See artists</a>
-										</section>
-									</div>
-									<div class="col-4 col-12-small">
-											<section class="box">
-												<header>
-													<h2>City</h2>
-												</header>
-												<a class="image featured"><img src="images/blanc.gif" alt="" /></a>
-												<p>Name of univerisities or bands available in this city.</p>
-												<a href="#" class="button style1">See artists</a>
-											</section>
-									</div>
+							{% endfor %}
 						</div>
 					</div>
 				</div>
 				</section>
 				
+				<!-- ARTISTS -->
 				<section id="highlights" class="wrapper style2">
 
 				<div class="title" id="artists">Artists</div>
 					<div class="container">
 						<div class="row aln-center">
+
+							{% for artist in all_artists %}
 							<div class="col-4 col-12-medium">
 								<section class="highlight">
-									<a href="#" class="image featured"><img src="images/bannerr.jpg" alt="" /></a>
-									<h3><a href="#">Name of artist/band</a></h3>
-									<p>Brief story about artist/specificity</p>
+									<a class="image featured"><img src="images/{{ artist.photo }}" alt="View of {{ artist.name }}" /></a>
+									<h3><a href="#">{{ artist.name }}</a></h3>
+									<p>{{ artist.description }}</p>
 									<ul class="actions">
-										<li><a href="#" class="button style1">Learn More</a></li>
+										<li><a href="?cmd=artist&artist={{ artist.id }}" class="button style1">Learn More</a></li>
 									</ul>
 								</section>
 							</div>
-							<div class="col-4 col-12-medium">
-								<section class="highlight">
-									<a href="#" class="image featured"><img src="images/bannerr.jpg" alt="" /></a>
-									<h3><a href="#">Name of artist/band</a></h3>
-									<p>Brief story about artist/specificity</p>
-									<ul class="actions">
-										<li><a href="#" class="button style1">Learn More</a></li>
-									</ul>
-								</section>
-							</div>
-							<div class="col-4 col-12-medium">
-								<section class="highlight">
-									<a href="#" class="image featured"><img src="images/bannerr.jpg" alt="" /></a>
-									<h3><a href="#">Name of artist/band</a></h3>
-									<p>Brief story about artist/specificity</p>
-									<ul class="actions">
-										<li><a href="#" class="button style1">Learn More</a></li>
-									</ul>
-								</section>
-							</div>
+							{% endfor %}
+
 						</div>
 					</div>
 				</section>
