@@ -1,0 +1,15 @@
+[23-Aug-2019 16:49:11 UTC] PHP Warning:  require_once(../vendor/autoload.php): failed to open stream: No such file or directory in /home/yherex7bquij/public_html/admin/index.php on line 14
+[23-Aug-2019 16:49:11 UTC] PHP Fatal error:  require_once(): Failed opening required '../vendor/autoload.php' (include_path='.:/opt/alt/php72/usr/share/pear') in /home/yherex7bquij/public_html/admin/index.php on line 14
+[23-Aug-2019 17:11:19 UTC] PHP Warning:  A non-numeric value encountered in /home/yherex7bquij/public_html/admin/mte/mte.php on line 204
+[23-Aug-2019 17:11:22 UTC] PHP Warning:  A non-numeric value encountered in /home/yherex7bquij/public_html/admin/mte/mte.php on line 204
+[23-Aug-2019 17:11:23 UTC] PHP Notice:  Undefined index: fileToUpload in /home/yherex7bquij/public_html/admin/pic.php on line 29
+[23-Aug-2019 17:11:23 UTC] PHP Notice:  Undefined variable: uploadOk in /home/yherex7bquij/public_html/admin/pic.php on line 45
+[23-Aug-2019 17:13:14 UTC] PHP Notice:  Undefined index: fileToUpload in /home/yherex7bquij/public_html/admin/pic.php on line 29
+[23-Aug-2019 17:13:14 UTC] PHP Notice:  Undefined variable: uploadOk in /home/yherex7bquij/public_html/admin/pic.php on line 45
+[23-Aug-2019 17:15:39 UTC] PHP Warning:  A non-numeric value encountered in /home/yherex7bquij/public_html/admin/mte/mte.php on line 204
+[23-Aug-2019 17:15:49 UTC] PHP Notice:  Undefined property: MySQLtabledit::$content in /home/yherex7bquij/public_html/admin/mte/mte.php on line 836
+[23-Aug-2019 17:15:49 UTC] PHP Warning:  A non-numeric value encountered in /home/yherex7bquij/public_html/admin/mte/mte.php on line 204
+[23-Aug-2019 17:17:32 UTC] PHP Warning:  A non-numeric value encountered in /home/yherex7bquij/public_html/admin/mte/mte.php on line 204
+[23-Aug-2019 17:17:40 UTC] PHP Warning:  A non-numeric value encountered in /home/yherex7bquij/public_html/admin/mte/mte.php on line 204
+[23-Aug-2019 17:17:42 UTC] PHP Notice:  Undefined index: fileToUpload in /home/yherex7bquij/public_html/admin/pic.php on line 29
+[23-Aug-2019 17:17:42 UTC] PHP Notice:  Undefined variable: uploadOk in /home/yherex7bquij/public_html/admin/pic.php on line 45
